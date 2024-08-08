@@ -3,9 +3,8 @@ import 'package:task_2_week13/Database/Db_Heloer.dart';
 import 'package:task_2_week13/models/Task.dart';
 
 class TaskItem extends StatefulWidget {
-  const TaskItem({super.key, required this.task, required this.onTaskChanged});
+  const TaskItem({super.key, required this.task});
   final Task task;
-  final Function onTaskChanged;
 
   @override
   State<TaskItem> createState() => _TaskItemState();
@@ -38,7 +37,6 @@ class _TaskItemState extends State<TaskItem> {
             });
             var dbHelper = Db_Helper();
             await dbHelper.updateTaskDone(widget.task.id, isChecked ? 1 : 0);
-            widget.onTaskChanged(); // Refresh tasks after updating
           },
         ),
       ),

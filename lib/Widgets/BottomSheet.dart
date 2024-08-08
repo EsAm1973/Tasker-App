@@ -27,7 +27,7 @@ class _BottomSheetContentState extends State<BottomSheetContent> {
           padding: const EdgeInsets.all(10),
           child: Form(
             child: Column(
-              mainAxisSize: MainAxisSize.min,
+              //mainAxisSize: MainAxisSize.min,
               children: [
                 TextFormField(
                   decoration: const InputDecoration(

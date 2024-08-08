@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
         body: Column(
           children: [
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              padding: const EdgeInsets.all(10),
               alignment: Alignment.center,
               width: double.infinity,
               height: 130,
@@ -123,7 +123,6 @@ class _HomePageState extends State<HomePage> {
                         Task task = _tasks[index];
                         return TaskItem(
                           task: task,
-                          onTaskChanged: _fetchTasks,
                         );
                       },
                     ),
